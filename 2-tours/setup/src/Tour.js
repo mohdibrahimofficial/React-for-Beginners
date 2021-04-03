@@ -5,12 +5,12 @@ const Tour = ({id,image,info,price,name,removeTour}) => {
   const [readMore,setReadmore] = useState(false);
 
   return (
-    <article className="single-tour">
+    <div className="single-tour">
       <img src={image} alt={name} />
       <footer>
         <div className="tour-info">
           <h4>{name}</h4>
-          <h4 className="tour-price">${price}</h4>
+          <h4 className="price">${price}</h4>
         </div>
         <p>
           { readMore ? info : `${info.substring(0,200)}...`}
@@ -18,11 +18,11 @@ const Tour = ({id,image,info,price,name,removeTour}) => {
               {readMore?'Show Less':'Read More'}
             </button>
           </p>
-        <button className="delete-btn" onClick={() => removeTour(id)}>
+        <button className="btn-dlt" onClick={() => removeTour(id)}>
           Not Interested
         </button>
       </footer>
-    </article>
+    </div>
   );
 };
 

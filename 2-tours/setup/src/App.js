@@ -46,10 +46,12 @@ function App() {
   {
     return (
       <main>
-        <div className="title">
-          <h2>No tour left...</h2>
-          <button className="btn" onClick={fetchTours}>Refresh</button>
-        </div>
+        <section>
+          <div className="title">
+            <h2>No tour left...</h2>
+            <button className="btn" onClick={fetchTours}>Refresh</button>
+          </div>
+        </section>
       </main>
     )
   }
