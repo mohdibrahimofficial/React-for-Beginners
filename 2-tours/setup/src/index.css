@@ -168,6 +168,7 @@ section .single-tour img
 section .single-tour footer
 {
   padding: 1.5rem 2rem;
+  transition: 0.5s all;
 }
 
 section .single-tour footer .tour-info
