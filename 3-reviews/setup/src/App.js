@@ -4,7 +4,7 @@ import Review from './Review';
 function App() {
   return (
     <main>
-      <section className="container">
+      <section>
         <div className='title'>
             <h2>our reviews</h2>
             <div className='underline'></div>

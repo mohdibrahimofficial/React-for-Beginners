@@ -40,28 +40,22 @@ const Review = () => {
   }
 
   return ( 
-      <article className='review'>
-          <div className='img-container'>
-            <img src={image} alt={name} className='person-img' />
-            <span className='quote-icon'>
-              <FaQuoteRight />
-            </span>
-          </div>
-          <h4 className='author'>{name}</h4>
-          <p className='job'>{job}</p>
-          <p className='info'>{text}</p>
-          <div className='button-container'>
-            <button className='prev-btn'onClick={prevBtn}>
-              <FaChevronLeft />
-            </button>
-            <button className='next-btn' onClick={nextBtn}>
-              <FaChevronRight />
-            </button>
-          </div>
-          <button className='random-btn' onClick={randomPerson}>
-            surprise me
-          </button>
-      </article>
+    <div className="mainCont">
+      <div className="imgcont">
+        <img src={image} alt={name}/>
+        <span className="quote-icon">
+          <FaQuoteRight/>
+        </span>
+      </div>
+      <h4 className="author">{name}</h4>
+			<p className="job">{job}</p>
+      <p className="info">{text}</p>
+      <div class="btn-cont">
+					<button className="next-btn" onClick={prevBtn}> <FaChevronLeft /> </button>
+					<button className="prev-btn" onClick={nextBtn}> <FaChevronRight /> </button>
+				</div>
+			<button className="random-btn" onClick={randomPerson}>Suprise Me</button>
+    </div>
   );
 };
 
