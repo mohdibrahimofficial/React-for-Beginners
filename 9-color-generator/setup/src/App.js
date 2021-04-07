@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import SingleColor from './SingleColor'
 
 import Values from 'values.js'
@@ -6,7 +6,14 @@ import Values from 'values.js'
 function App() {
   const [color,setColor] = useState('');
   const [error,setError] = useState(false);
-  const [list,setList] = useState([]);
+  const [list,setList] = useState(new Values('#f15025').all(10));
+
+  useEffect(()=>{
+    const timeout = setTimeout(()=>{
+      setError(false);
+    },5000)
+    return ()=>clearTimeout(timeout);
+  },[error])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,12 +21,11 @@ function App() {
        
        let colors = new Values(color).all(10);
        setList(colors);
-       setError(false);
     }
     catch(error)
     {
-      console.log(error);
       setError(true);
+      console.log(error);
     }
   }
 
@@ -39,7 +45,7 @@ function App() {
       <section className="colors">
         {
           list.map((color,index)=>{
-            return <SingleColor key={index} {...color} index={index} />
+            return <SingleColor key={index} {...color} hexC={color.hex} index={index} />
           })
         }
       </section>
