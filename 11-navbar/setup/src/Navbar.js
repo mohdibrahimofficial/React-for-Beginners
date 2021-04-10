@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { FaBars, FaTwitter } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { links, social } from './data'
 import logo from './logo.svg'
 
@@ -33,8 +33,8 @@ const Navbar = () => {
                   links.map((link)=>{
                       const {id,url,text} = link;
                       return (
-                        <li>
-                          <a key={id} href={url}>{text}</a>
+                        <li key={id}>
+                          <a href={url}>{text}</a>
                         </li>
                       )
                   })
@@ -48,8 +48,8 @@ const Navbar = () => {
                 social.map((social)=>{
                   const {id,url,icon} = social;
                   return (
-                    <li>
-                      <a key={id} href={url}>{icon}</a>
+                    <li key={id}>
+                      <a href={url}>{icon}</a>
                     </li>
                   )
                 })
