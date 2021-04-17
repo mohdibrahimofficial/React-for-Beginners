@@ -1,6 +1,17 @@
+
+##Prerequisites
+
+1. Download [Node.js LTS](https://nodejs.org/en/)
+2. Install on your windows or mac
+3. After installation open cmd or terminal type npm -v also npx -v
+4. Open your editor like Visual studio, Sublime etc.
+5. Install extensions for JS in your editor
+6. Lets Start...
+
+
 #### Tutorial Video
 
-(React Tutorial)[https://youtu.be/iZhV0bILFb0]
+[React Tutorial](https://youtu.be/iZhV0bILFb0)
 
 #### All Projects
 
@@ -10,13 +21,13 @@
 
 #### useState
 
-1. Birthday Reminder
+1. Birthday Remainder
 
 #### useEffect and Conditional Rendering
 
 2. Tours
 3. Reviews
-4. Questions
+4. Questions (Do by own)
 5. Menu
 6. Tabs
 7. Slider
@@ -43,16 +54,3 @@
 #### React Router and useCallback
 
 15. Cocktails
-
-## Advanced Projects (Course Exclusive)
-
-[Course Link](https://www.udemy.com/course/react-tutorial-and-projects-course/?couponCode=REACT-OCT)
-
-16. Markdown Preview
-17. Random Person
-18. Pagination
-19. Stock Photos
-20. Dark Mode
-21. Movie DB
-22. Hacker News
-23. Quiz
