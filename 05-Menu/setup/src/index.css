@@ -1,3 +1,9 @@
+/*
+=============== 
+Variables
+===============
+*/
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -115,173 +121,116 @@ p {
     line-height: 1;
   }
 }
+/*  global classes */
 
-/* main */
-.menu
-{
-  padding: 5rem 0;
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
 }
 
-.section
-{
-    margin: 0 auto;
+@media screen and (min-width: 992px) {
+  .section {
     width: 95vw;
-    max-width: var(--max-width);
-}
-
-@media only screen and (max-width: 800px)
-{
-  .section
-  {
-    margin: 0 auto;
-    width: 90vw;
-    max-width: var(--fixed-width);
   }
 }
 
-.section .title
-{
+/*
+=============== 
+Menu
+===============
+*/
+
+.menu {
+  padding: 5rem 0;
+}
+.title {
   text-align: center;
   margin-bottom: 2rem;
 }
-
-.section .underline
-{
+.underline {
   width: 5rem;
   height: 0.25rem;
   background: var(--clr-gold);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.section .btn-container
-{
+.btn-container {
+  margin-bottom: 4rem;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-
-
-.section .filter-btn
-{
-  border: none;
-  outline: none;
-  color: var(--clr-gold);
-  text-transform: capitalize;
-  font-size: 1rem;
-  font-weight: 100;
+.filter-btn {
   background: transparent;
+  border-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
   letter-spacing: 1px;
   padding: 0.375rem 0.75rem;
-  margin: 0 0.5rem;
+  color: var(--clr-gold);
   cursor: pointer;
   transition: var(--transition);
   border-radius: var(--radius);
-  margin-bottom: 5rem;
 }
-
-.section .filter-btn:hover
-{
+.filter-btn:hover {
   background: var(--clr-gold);
-  color: white;
+  color: var(--clr-white);
 }
-
-
-.section-center
-{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  flex-wrap: wrap;
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  gap: 3rem 2rem;
+  justify-items: center;
 }
-
-.section-center article
-{
-  width: 48%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 2rem;
-  /* padding: 6px; */
+.menu-item {
+  display: grid;
+  gap: 1rem 2rem;
+  max-width: 25rem;
 }
-
-.section-center article .item-info
-{
-
-  width: 52%;
-  /* padding: 0 0 0 20px; */
-}
-
-.section-center article .item-info p
-{
-  text-align: justify;
-}
-
-.section-center article img
-{
-  width: 43%;
-  height: 175px;
+.photo {
   object-fit: cover;
+  height: 200px;
+  width: 100%;
+  border: 0.25rem solid var(--clr-gold);
+  border-radius: var(--radius);
   display: block;
-  border: 5px solid var(--clr-gold);
-  border-radius: 0.375rem;
 }
-
-
-.section-center article .item-info header
-{
+.item-info header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px dotted grey;
+  border-bottom: 0.5px dotted var(--clr-grey-5);
+}
+.item-info h4 {
+  margin-bottom: 0.5rem;
+}
+.price {
+  color: var(--clr-gold);
+}
+.item-text {
+  margin-bottom: 0;
+  padding-top: 1rem;
 }
 
-.section-center article .item-info header .price
-{
-color: var(--clr-gold);
-}
-
-
-@media only screen and (max-width: 1200px)
-{
-  .section-center
-  {
-    align-items: center;
-    justify-content: center;
+@media screen and (min-width: 768px) {
+  .menu-item {
+    grid-template-columns: 225px 1fr;
+    gap: 0 1.25rem;
+    max-width: 40rem;
   }
-
-  .section-center article
-  {
-    width: 60%;
-  }
-
-  .section-center article img
-  {
-    width: 45%;
-    margin-bottom: 1rem;
+  .photo {
+    height: 175px;
   }
 }
-
-
-@media only screen and (max-width: 825px)
-{
-  .section-center article img
-  {
-    width: 60vw;
-    margin-bottom: 1rem;
+@media screen and (min-width: 1200px) {
+  .section-center {
+    width: 95vw;
+    grid-template-columns: 1fr 1fr;
   }
-  .section-center article
-  {
-    width: 60vw;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-  }
-  .section-center article .item-info
-  {
-    width: 100%;
+  .photo {
+    height: 150px;
   }
 }
-
-
-
-

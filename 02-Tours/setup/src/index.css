@@ -1,3 +1,9 @@
+/*
+=============== 
+Variables
+===============
+*/
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -38,19 +44,20 @@
   --max-width: 1170px;
   --fixed-width: 620px;
 }
-
+/*
+=============== 
+Global Styles
+===============
+*/
 
 *,
-::after,::before
-{
+::after,
+::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
-body
-{
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: var(--clr-grey-10);
@@ -58,7 +65,6 @@ body
   line-height: 1.5;
   font-size: 0.875rem;
 }
-
 ul {
   list-style-type: none;
 }
@@ -113,128 +119,110 @@ p {
     line-height: 1;
   }
 }
+/*  global classes */
 
-main
-{
-  width: 90vw;
-  margin: 5rem auto;
-  max-width: var(--fixed-width);
-}
-
-
-main section
-{
+/* section */
+.section {
   width: 90vw;
   margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+.btn {
+  background: var(--clr-primary-5);
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  text-transform: capitalize;
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  border-color: transparent;
+  cursor: pointer;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+/*
+=============== 
+Tours
+===============
+*/
+main {
+  width: 90vw;
   max-width: var(--fixed-width);
+  margin: 5rem auto;
 }
-
-section .title
-{
+.loading {
+  text-align: center;
+}
+.title {
   text-align: center;
   margin-bottom: 4rem;
 }
-
-.loading
-{
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-section .title .underline
-{
+.underline {
   width: 6rem;
   height: 0.25rem;
   background: var(--clr-primary-5);
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-section .single-tour
-{
-  background: #fff;
+.single-tour {
+  background: var(--clr-white);
+  border-radius: var(--radius);
   margin: 2rem 0;
-  box-shadow :  0px 5px 15px rgba(0,0,0,0.1);
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
 }
-
-section .single-tour img
-{
+.single-tour:hover {
+  box-shadow: var(--dark-shadow);
+}
+.single-tour img {
   width: 100%;
   height: 20rem;
   object-fit: cover;
   border-top-right-radius: var(--radius);
   border-top-left-radius: var(--radius);
 }
-
-section .single-tour footer
-{
-  padding: 1.5rem 2rem;
-  transition: 0.5s all;
-}
-
-section .single-tour footer .tour-info
-{
+.tour-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
-
-section .single-tour footer .tour-info .price
-{
-  letter-spacing: 2px;
-  font-size: 1em;
-  background: var(--clr-primary-10);
-  color: var(--clr-primary-5);
-  padding: 5px;
+.tour-info h4 {
+  margin-bottom: 0;
 }
-
-section .single-tour footer p
-{
-  text-align: justify;
-}
-
-section .single-tour footer p button
-{
-  border: 0;
-  outline: 0;
+.single-tour button {
   background: transparent;
+  border-color: transparent;
+  text-transform: capitalize;
   color: var(--clr-primary-5);
   font-size: 1rem;
-}
-
-
-.btn-dlt
-{
-  margin: 1rem auto 0;
-  padding: 5px;
-  border: 1px solid #bb2525;
-  border-radius: 5px;
-  width: 200px;
-  background: transparent;
-  color: #bb2525;
   cursor: pointer;
-  font-size: 1rem;
-  display: block;
+  padding-left: 0.25rem;
 }
-
-.btn
-{
-  margin: 1rem auto 0;
-  padding: 5px;
-  border: 1px solid #01c3f3;
-  border-radius: 5px;
-  width: 200px;
+.tour-price {
+  color: var(--clr-primary-5);
   background: var(--clr-primary-10);
-  color: #01c3f3;
-  cursor: pointer;
-  font-size: 1rem;
-  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
 }
-
-
-
-
-
-
-
-
+.single-tour footer {
+  padding: 1.5rem 2rem;
+}
+.single-tour .delete-btn {
+  display: block;
+  width: 200px;
+  margin: 1rem auto 0 auto;
+  color: var(--clr-red-dark);
+  letter-spacing: var(--spacing);
+  background: transparent;
+  border: 1px solid var(--clr-red-dark);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+}

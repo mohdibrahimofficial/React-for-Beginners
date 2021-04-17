@@ -1,3 +1,9 @@
+/*
+=============== 
+Variables
+===============
+*/
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(205, 86%, 17%);
@@ -113,158 +119,114 @@ p {
     line-height: 1;
   }
 }
+/*  global classes */
 
-/* main */
+/* section */
+.section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
 
-nav
-{
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+nav {
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
 }
-
-.social-icons
-{
-  display: none;
-}
-
-.links-container
-{
- height: 0;
- overflow: hidden;
- transition: var(--transition);
-}
-
-.links-container ul
-{
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  font-size: 1rem;
-}
-
-.links-container a
-{
-    color: var(--clr-grey-3);
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    display: block;
-    padding: .5rem 1rem;
-    transition: var(--transition);
-}
-
-.links-container a:hover
-{
-  margin: 0 0 0 1rem;
-}
-
-.links li:hover
-{
-  background: var(--clr-primary-7);
-  transition: var(--transition);
-}
-
-.nav-header
-{
+.nav-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
 }
-
-.logo
-{
+.nav-toggle {
+  font-size: 1.5rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.nav-toggle:hover {
+  color: var(--clr-primary-1);
+  transform: rotate(90deg);
+}
+.logo {
   height: 40px;
 }
-
-
-.nav-toggle
-{
-  color: var(--clr-primary-5);
-  border-color: transparent;
-  outline: none;
-  font-size: 1.5rem;
-  background: transparent;
-  cursor: pointer;
+.links a {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  padding: 0.5rem 1rem;
   transition: var(--transition);
 }
-
-.nav-toggle:hover
-{
-  transform: rotate(90deg);
-  color: var(--clr-primary-1);
+.links a:hover {
+  background: var(--clr-primary-8);
+  color: var(--clr-primary-5);
+  padding-left: 1.5rem;
 }
-
-.links-container a:hover
-{
-  color: white;
+.social-icons {
+  display: none;
 }
-
-@media only screen and (min-width: 800px)
-{
-  .nav-center
-{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;  
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
 }
-  .nav-toggle
-  {
+.show-container {
+  height: 10rem;
+}
+@media screen and (min-width: 800px) {
+  .nav-center {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
     display: none;
   }
-  .links-container,.social-icons
-  {
-    display: block;
-    height: auto!important;
+  .links-container {
+    height: auto !important;
   }
-  .links
-  {
+  .links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  .links a
-  {
-    margin:0 .5rem;
-    text-transform: capitalize;
-    color: var(--clr-grey-3);
-    transition: var(--transition);
-    letter-spacing: var(--spacing);
+  .links a {
+    padding: 0;
+    margin: 0 0.5rem;
   }
-
-  .links li:hover
-  {
+  .links a:hover {
+    padding: 0;
     background: transparent;
-    
   }
-
-  .links a:hover
-  {
-    color: var(--clr-primary-5);
-  }
-
-  .links-container a:hover
-  {
-    margin: 0 .5rem;
-  }
-
-  .social-icons
-  {
+  .social-icons {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
-    .social-icons ul li a
-    {
-      margin: 0 .5rem;
-      color: var(--clr-primary-5);
-      transition: var(--transition);
-    }
-    .social-icons ul li a:hover
-    {
-      color: var(--clr-primary-7);
-
-    }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
 }
-
-
-
-

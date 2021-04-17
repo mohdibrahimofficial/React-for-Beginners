@@ -1,3 +1,9 @@
+/*
+=============== 
+Variables
+===============
+*/
+
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: hsl(184, 91%, 17%);
@@ -112,167 +118,150 @@ p {
     line-height: 1;
   }
 }
+/*  global classes */
 
-/* main */
-.section
-{
-  width: 95vw;
+/* section */
+.section {
+  width: 90vw;
   margin: 5rem auto;
   max-width: var(--max-width);
 }
 
-.section .title
-{
-  margin-bottom: 4rem;
+@media screen and (min-width: 992px) {
+  .section {
+    width: 95vw;
+  }
+}
+
+.loading {
   text-align: center;
 }
 
-.section .underline
-{
+.underline {
   width: 5rem;
   height: 0.25rem;
+  margin-bottom: 1.25rem;
   background: var(--clr-primary-5);
   margin-left: auto;
   margin-right: auto;
 }
+.title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
 
+/*
+=============== 
+Jobs
+===============
+*/
 
-.jobs-center
-{
+.jobs-center {
   width: 80vw;
   margin: 0 auto;
   max-width: var(--max-width);
-  display: flex;
-  justify-content: space-between;
 }
-
-.jobs-center .btn-container
-{
-  width: 15%;
-  align-self: flex-start;
+.btn-container {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
   margin-bottom: 4rem;
   flex-wrap: wrap;
 }
-
-.job-info
-{
-  width: 80%;
-}
-
-.jobs-center .job-btn
-{
-  border: transparent;
-  padding: 0.25rem 0;
-  margin: 0 0.35rem;
+.job-btn {
   background: transparent;
+  border-color: transparent;
   text-transform: capitalize;
   font-size: 1.25rem;
-  letter-spacing: 0.1rem;
+  letter-spacing: var(--spacing);
+  margin: 0 0.5rem;
   transition: var(--transition);
   cursor: pointer;
-  outline: var(--clr-primary-10);
-  margin-bottom: 2rem;
+  padding: 0.25rem 0;
+  line-height: 1;
+  outline-color: var(--clr-primary-10);
 }
-
-.jobs-center .job-btn.active-btn,
-.jobs-center .job-btn:hover
-{
+.job-btn:hover {
   color: var(--clr-primary-5);
-  box-shadow: -2px 0 var(--clr-primary-5);
+  box-shadow: 0 2px var(--clr-primary-5);
+}
+.active-btn {
+  color: var(--clr-primary-5);
+  box-shadow: 0 2px var(--clr-primary-5);
 }
 
-.job-info h3
-{
-  font-weight: normal;
+.job-info h3 {
+  font-weight: 400;
 }
-
-.job-info h4
-{
-  background: var(--clr-grey-9);
+.job-info h4 {
   text-transform: uppercase;
+  color: var(--clr-grey-5);
+  background: var(--clr-grey-9);
   display: inline-block;
-  padding: 0.375rem;
-  border-radius: var(--radius); 
-  color: var(--clr-grey-5);   
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--radius);
 }
-
-.job-info .job-date
-{
+.job-date {
   letter-spacing: var(--spacing);
 }
-
-.job-desc
-{
-  display: flex;
-  justify-content: space-between;
+.job-desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
   align-items: center;
   margin-bottom: 1.25rem;
-  /* border: 2px solid red; */
 }
-
-
-.job-desc p
-{
+.job-desc p {
   margin-bottom: 0;
   color: var(--clr-grey-3);
-  margin-left: 2rem;
 }
-
-
-.job-icon
-{
-  font-size: 1.2em;
-  justify-self: flex-start;
+.job-icon {
   color: var(--clr-primary-5);
-  display: inline;
 }
-
-
-@media only screen and (max-width: 992px)
-{
-  .jobs-center
-  {
+@media screen and (min-width: 992px) {
+  .jobs-center {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 4rem;
+  }
+  .btn-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    justify-content: flex-start;
   }
-  
-  .jobs-center .btn-container
-  {
-    flex-direction: row;
-    align-self: center;
-    width: 100%;
+  .job-btn {
+    margin-bottom: 1rem;
   }
-
-  .jobs-center .job-btn.active-btn,
-  .jobs-center .job-btn:hover
-  {
-    color: var(--clr-primary-5);
-    box-shadow: 0 2px var(--clr-primary-5);
+  .active-btn {
+    box-shadow: -2px 0 var(--clr-primary-5);
   }
-
-  .job-icon
-  {
-    font-size: 2.5em;
+  .job-btn:hover {
+    box-shadow: -2px 0 var(--clr-primary-5);
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.btn {
+  text-transform: uppercase;
+  background: var(--clr-primary-5);
+  color: var(--clr-primary-9);
+  padding: 0.375rem 0.75rem;
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  display: block;
+  width: 12rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.btn:hover {
+  color: var(--clr-primary-1);
+  background: var(--clr-primary-8);
+}
+.center-btn {
+}

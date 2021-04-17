@@ -6,6 +6,7 @@
 3. After installation open cmd or terminal type npm -v also npx -v
 4. Open your editor like Visual studio, Sublime etc.
 5. Install extensions for JS in your editor
+5. Clone this repo.
 6. Lets Start...
 
 

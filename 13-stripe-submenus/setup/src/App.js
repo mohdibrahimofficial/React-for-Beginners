@@ -6,10 +6,7 @@ import Submenu from './Submenu'
 function App() {
   return (
     <>
-      <Navbar/>
-      <Sidebar/>
-      <Hero/>
-      <Submenu />
+      <h2>stripe submenus setup</h2>
     </>
   )
 }
