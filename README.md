@@ -1,5 +1,5 @@
 
-##Prerequisites
+## Prerequisites
 
 1. Download [Node.js LTS](https://nodejs.org/en/)
 2. Install on your windows or mac
