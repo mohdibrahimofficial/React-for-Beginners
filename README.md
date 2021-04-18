@@ -1,5 +1,5 @@
 
-## Prerequisites
+## Before Start
 
 1. Download [Node.js LTS](https://nodejs.org/en/)
 2. Install on your windows or mac
@@ -13,6 +13,7 @@
 #### Tutorial Video
 
 [React Tutorial](https://youtu.be/iZhV0bILFb0)
+( Thank you [John Smilga](https://github.com/john-smilga/react-projects) for wonderful projects. )
 
 #### All Projects
 
