@@ -17,7 +17,7 @@
 
 #### All Projects
 
-[Projects Site](https://react-projects.netlify.app/)
+[Projects Site](https://all-react-projects.netlify.app/)
 
 ## Corresponding Tutorial Topics
 
