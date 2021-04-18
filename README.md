@@ -13,7 +13,7 @@
 #### Tutorial Video
 
 [React Tutorial](https://youtu.be/iZhV0bILFb0)
-( Thank you [John Smilga](https://github.com/john-smilga/react-projects) for wonderful projects. )
+( Thank you [John Smilga](https://github.com/john-smilga/react-projects) for wonderful projects )
 
 #### All Projects
 
@@ -56,3 +56,5 @@
 #### React Router and useCallback
 
 15. Cocktails
+
+** (Further updates will come ASAP) **
